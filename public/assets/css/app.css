@@ -1,0 +1,95 @@
+body {
+    background: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.rj-logo {
+    margin-left: 20%;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px;
+}
+
+.rj-contact {
+    position: absolute;
+    margin-bottom: 5px;
+    background: white;
+    height: 172px;
+    width: 525px;
+    top: 72px;
+    left: 850px;
+}
+
+.rj-contact-content {
+    color: green;
+    margin-top: 3%;
+    font-size: 18px;
+    margin-left: 30%;
+}
+
+.rj-spltext {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+.rj-about {
+    color: white;
+    font-size: 20px;
+    font-weight: 100;
+    background: rgba(0,0,0,0.4);
+    margin-top: 20px;
+    margin-right: 20%;
+    margin-left: 20%;
+    font-style: italic;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+.rj-cont {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.rj-corousel {
+    height: 400px;
+    width: 100%;
+    background: rgba(0,0,0,0.1);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.7);
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    
+    display: block;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    text-decoration: none;
+    color: white;
+    background-blend-mode: lighten;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  .item {
+      opacity: 1;
+  }
