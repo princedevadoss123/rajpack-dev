@@ -6,5 +6,11 @@ App.config(function ($routeProvider) {
         templateUrl: 'app/templates/home.html'
       }
     )
+    .when('/admin',
+      {
+        controller: 'AdminController',
+        templateUrl: 'app/templates/admin.html'
+      }
+    )
     .otherwise( { redirectTo: '/' } );
 });

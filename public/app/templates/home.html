@@ -58,28 +58,13 @@
       <div class="rj-about" id="about">
           <h3>About Us:</h3>
           <br>
-           <p> We have great pleasure to introduce ourselves as one of the leading Manufacturer of corrugated boxes, printed cartons,
-               <br> partitions, export carton boxes, rolls, and liners for the past 10 years. </p>
-               <br>
-            <p>A family enterprises well Managed by qualified Members. Latest Machines equipped can make wide range Production with quality. Quality inspection from the stage of raw materials input to deliver the materials. Quality and customer satisfaction is our main goal.</p> 
-            <br>
-           <p>Marketing Executives will maintain direct contact with the customers for procuring orders and prompt execution of the same. Further they also attend after sales and sort out any problem faced by the customers regarding supplies.</p>
-           <br>
-           <p>Without cost effective management, we are able to generate enough funds for running our business. Our assurance of quality, prompt delivery and will stand us in good stead and from the basis of further growth and expansion of our business.
-           <br> We herewith have given below some of our reliable customers like you for your kind consideration</p>
+           <p ng-repeat = "aboutus in rajpack.aboutus"> {{aboutus}} </p>
       </div>
       <div class ="rj-about">
           <h2>Machinery:</h2>
           <br>
           <ul>
-                <li>Cutting machine - Automatic </li><br><br>
-                <li>Pasting machine (Size: up to 85 inches) </li><br><br>
-                <li>Greasing machine (Size: 90”)</li><br><br>
-                <li>Slotting machine</li><br><br>
-                <li>Punching machine</li><br><br>
-                <li>Normal Stitching machine</li><br><br>
-                <li>Heavy duty stitching machine</li><br><br>
-                <li>RS4 with Single colour  Printing</li>
+                <li ng-repeat-start="machinery in rajpack.machinery"> {{machinery}} </li><br><br ng-repeat-end/>
                 
           </ul>
       </div>
@@ -87,36 +72,6 @@
             <h2>Customers:</h2>
             <br>
             <ul>
-                  <li>Cotton Home,
-                        Chennai – 600 028.
-                         </li><br><br>
-                  <li>Uma & company,
-                        Chennai – 600 001.
-                         </li><br><br>
-                  <li>The Lamp Shade,
-                        Chennai – 600 028.
-                        </li><br><br>
-                  <li>Fujitec India ltd</li><br><br>
-                  <li>Mahindra World City,
-                        Chennai
-                        </li><br><br>
-                  <li>Teja Industries,
-                        Urappakkam, 
-                        Chennai
-                  </li><br><br>
-                  <li>Hindustan Motors Ltd,
-                        Chennai
-                        </li><br><br>
-                  <li>Frieght Systems India (P) Ltd,
-                        Chennai
-                        </li><br><br>
-                  <li>Packways International (Madras),
-                        Chennai
-                        </li><br><br>
-                  <li>
-                        Karadi Tales Company Pvt Ltd,
-                        Adyar                        
-                  </li>
-                  
+                  <li ng-repeat-start="customer in rajpack.customers">{{customer}}</li><br><br ng-repeat-end />
             </ul>
-        </div>
+      </div>
