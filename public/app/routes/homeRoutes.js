@@ -12,5 +12,9 @@ App.config(function ($routeProvider) {
         templateUrl: 'app/templates/admin.html'
       }
     )
+    .when('/adminpage',{
+        controller: "AdminPageController",
+        templateUrl: 'app/templates/adminpage.html'
+    })
     .otherwise( { redirectTo: '/' } );
 });
