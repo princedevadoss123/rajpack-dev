@@ -1,10 +1,10 @@
 App.controller('HomeController', [
   '$scope', '$http', 
   function ($scope, $http) {
-    $http({
+    $http ({
       method: 'GET',
       url: '/app/api/aboutus'
-    }).then( function(res) {
+    }).then (function(res) {
       console.log(res.data);
       $scope.rajpack = res.data[0];
     },
