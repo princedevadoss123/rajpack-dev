@@ -15,18 +15,16 @@
     <ul class="list-unstyled" id="machine-names">
         <li ng-repeat-start="machinery in rajpack.machinery"> {{machinery}}<span class="close">&times;</span> </li><br><br ng-repeat-end/>
     </ul>
-    <div></div>
     <div class="form-group">
         <label style="margin:16px;">Add Customers</label>
       <form role="form">
-          <input type="text" class="form-control" placeholder="Customer Name" name="customers" style="width:80%;margin:16px;">
+          <input type="text" class="form-control" placeholder="Customer Name" name="customers" style="width:80%;margin:16px;" ng-model="customer">
       </form>
-      <button type="button" class="btn btn btn-primary" style="margin:16px;" ng-click="addCustomer($event)">Add</button>
-    </div>
-    <div></div>
-    <ul class="list-unstyled" id="customer-names">
-        <li ng-repeat-start="customer in rajpack.customers"> {{customer}}<span class="close">&times;</span> </li><br><br ng-repeat-end/>
+      <button type="button" class="btn btn btn-primary" style="margin:16px;" ng-click="rajpack.customers.push(customer)">Add</button>
+      <ul class="list-unstyled" id="customer-names">
+        <li ng-repeat-start="customer in rajpack.customers"> {{customer}}<span style="align-content:right;">X</span> </li><br><br ng-repeat-end/>
     </ul>
+    </div>
     <div class="page-footer" style="margin:16px;text-align:center;">
         <button type="button" class="btn btn btn-success" ng-click="saveChanges()" >Save</button>
         <button type="button" class="btn btn btn-danger" ng-click="discardChanges()" >Cancel</button>

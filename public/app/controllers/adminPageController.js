@@ -28,7 +28,17 @@ App.controller("AdminPageController",[
         };
 
         $scope.saveChanges = function(){
-
+            $http({
+                url: '/app/api/aboutus',
+                method: "PUT",
+                data: $scope.rajpack
+            })
+            .then(function(response) {
+                console.log(response.data);
+            }, 
+            function(response) { // optional
+                alert(response);
+            });
         };
 
         $scope.discardChanges = function(){
