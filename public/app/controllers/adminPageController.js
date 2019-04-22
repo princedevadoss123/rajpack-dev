@@ -9,6 +9,7 @@ App.controller("AdminPageController",[
                 }).then( function(res) {
                     console.log(res.data);
                     $scope.rajpack = res.data[0];
+                    $scope.tempState = angular.copy($scope.rajpack);
                 },
                 function (error) {
                     console.log(error);
@@ -23,18 +24,14 @@ App.controller("AdminPageController",[
             console.log($event);
         };
 
-        $scope.addCustomer = function($event){
-            console.log($event);
-        };
-
         $scope.saveChanges = function(){
             $http({
                 url: '/app/api/aboutus',
                 method: "PUT",
-                data: $scope.rajpack
+                data: $scope.tempState
             })
             .then(function(response) {
-                console.log(response.data);
+                $scope.rajpack = angular.copy($scope.tempState);
             }, 
             function(response) { // optional
                 alert(response);
@@ -42,7 +39,8 @@ App.controller("AdminPageController",[
         };
 
         $scope.discardChanges = function(){
-
+            $scope.tempState = angular.copy($scope.rajpack);
+            $scope.$evalAsync();
         };
     }
 ]);
